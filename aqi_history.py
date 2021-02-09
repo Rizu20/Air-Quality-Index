@@ -13,8 +13,7 @@ def weather_request(lat,lon,start_date,end_date,api_key):
     response=urllib.request.urlopen(url_string)
     if response.status==200:
         print("Response fetched successfully from API call")
-        response_data=response.read()
-        response_data=response_data.decode('utf-8')
+        response_data=response.read().decode('utf-8')
         response_dict=json.loads(response_data)
         return response_dict
     else:
