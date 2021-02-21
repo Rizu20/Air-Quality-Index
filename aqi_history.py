@@ -58,6 +58,7 @@ def main():
     start_date=input("Please input start date in format YYYY-MM-DD hh:mm:ss : ").strip()
     end_date=input("Please input end date in format YYYY-MM-DD hh:mm:ss : ").strip()
     api_key=input("Please input API key of your OpenWeatherMap account : ").strip()
+    
     response_dict=weather_request(lat,lon,start_date,end_date,api_key)
 
     csv_file_write(response_dict)
