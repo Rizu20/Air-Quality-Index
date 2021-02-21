@@ -60,7 +60,6 @@ def main():
     api_key=input("Please input API key of your OpenWeatherMap account : ").strip()
     
     response_dict=weather_request(lat,lon,start_date,end_date,api_key)
-
     csv_file_write(response_dict)
 
 
